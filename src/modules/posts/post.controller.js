@@ -95,3 +95,4 @@ const getPostsWithCommentCount = async (req, res, next) => {
 };
 
 module.exports = { createPost, deletePost, getPostsWithDetails, getPostsWithCommentCount };
+//t3bt awy feha de bs 3ndy finals e7tmal at25r w a8eeb elesbo3en elgayeen
