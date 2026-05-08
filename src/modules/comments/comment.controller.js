@@ -65,7 +65,7 @@ const findOrCreateComment = async (req, res, next) => {
 };
 
 // ── C4: GET /comments/search ─────────────────────────────────
-// Find & count comments that contain a specific word (?word=the)
+// Find & count comments that contain a specific word
 const searchComments = async (req, res, next) => {
   try {
     const { word } = req.query;
@@ -76,7 +76,7 @@ const searchComments = async (req, res, next) => {
 
     const { count, rows } = await Comment.findAndCountAll({
       where: {
-        content: { [Op.iLike]: `%${word}%` }, // iLike = case-insensitive in Postgres
+        content: { [Op.iLike]: `%${word}%` }, // iLike = case-insensitive in Postgres got some help from ai obviouslyyy
       },
     });
 
@@ -91,7 +91,7 @@ const searchComments = async (req, res, next) => {
 };
 
 // ── C5: GET /comments/newest/:postId ─────────────────────────
-// 3 most recent comments for a specific post, ordered by createdAt DESC
+// 3 most recent comments for a specific post 7aseb
 const getNewestComments = async (req, res, next) => {
   try {
     const { postId } = req.params;
